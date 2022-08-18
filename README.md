@@ -1,0 +1,2 @@
+# SmallComponent
+Nothing

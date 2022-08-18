@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        input{
+            width: 100px;
+            height: 50px;
+        }
+        #div{
+            height: 60px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div><button id="clear" onclick="tryclear()">clear</button></div>
+    <div><input type="text" value="" oninput="trychange()" /></div>
+    <div id="div">1: <input type="button" id="1" value="0" onclick="tryclick();" /></div>
+    <div id="div">2: <input type="button" id="2" value="0" onclick="tryclick();" /></div>
+    <div id="div">3: <input type="button" id="3" value="0" onclick="tryclick();" /></div>
+    <div id="div">4: <input type="button" id="4" value="0" onclick="tryclick();" /></div>
+    <div id="div">5: <input type="button" id="5" value="0" onclick="tryclick();" /></div>
+    <div id="div">6: <input type="button" id="6" value="0" onclick="tryclick();" /></div>
+    <div id="div">7: <input type="button" id="7" value="0" onclick="tryclick();" /></div>
+    <div id="div">8: <input type="button" id="8" value="0" onclick="tryclick();" /></div>
+
+    
+<script>
+    function tryclick(){
+        event.target.value = Number(event.target.value) + 1;
+    };
+
+    function tryclear(){
+        for(let i = 1; i <= 8; i++){
+            document.getElementById(i).value = 0;
+        };
+    };
+
+    function trychange(){
+        document.getElementById(parseInt(event.target.value).toString()).click();
+        event.target.value = "";
+    };
+
+</script>    
+</body>
